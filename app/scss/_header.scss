@@ -1,0 +1,72 @@
+.header {
+
+    nav {
+        padding: 1.0625rem 1.5rem;
+    }
+
+    &_logo{
+
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+
+    &_menu { // mobile_menu
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $darkBlue;
+
+            &:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    &__links {
+        a {
+            position: relative;
+            font-size: 0.875rem;
+            color: $grayishBlue;
+            transition: color ease-in-out 400ms;
+
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to right, $limeGreen 50%, $brightCyan);
+                opacity: 0;
+                transition: opacity 500ms ease-in-out;
+                bottom: -30px;
+            }
+
+            &:hover {
+                color: $darkBlue;
+
+                &::before {
+                   opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        font-size: $font-sm;
+        color: $white;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+            opacity: 0.70;
+        }
+    }
+}
