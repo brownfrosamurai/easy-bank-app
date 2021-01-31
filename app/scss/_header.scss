@@ -1,5 +1,7 @@
 .header {
-
+    position: relative;
+    z-index: 1;
+    
     // Hamburger open styles 
     &.open {
 
@@ -86,7 +88,7 @@
             position: relative;
             font-size: 0.875rem;
             color: $grayishBlue;
-            transition: color ease-in-out 400ms;
+            transition: color ease-in-out 300ms;
 
             &:not(:last-child) {
                 margin-right: 32px;
