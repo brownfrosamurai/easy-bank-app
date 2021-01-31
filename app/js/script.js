@@ -19,7 +19,6 @@ btnHamburger.addEventListener('click', function() { // close menu
         fadeElems.forEach(function(element) {
             element.classList.remove('fade-out');
             element.classList.add('fade-in');
-        })
-        
+        });
     }
 });
