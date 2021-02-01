@@ -143,9 +143,10 @@ button, .button {
     color: $white;
     font-weight: 400;
     font-size: $font-sm;
-    transition: opacity 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 
-        &::before {
+     @include breakpoint-down(medium) {
+          &::before {
             content: "";
             position: absolute;
             top: 0;
@@ -160,6 +161,15 @@ button, .button {
             opacity: 1;
 
         }
+    }
+
+    @include breakpoint-up(large) {
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+      
 }
 
 // Visibility 
